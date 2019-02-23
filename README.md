@@ -7,8 +7,8 @@ For windows: if you compile with VC++, everything should work just file, if you 
 ## Compilation:
    ## Command line:
    
-   * Windows: `g++ server_tester.cpp -lws2_32 -O3 -o server_tester.cpp`
-   * Linux: `g++ server_tester.cpp -O3 -o server_tester.cpp`
+   * Windows: `g++ server_tester.cpp -lws2_32 -O3 -o server_tester`
+   * Linux: `g++ server_tester.cpp -O3 -o server_tester`
       
    ## CodeBlocks:
    
