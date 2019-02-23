@@ -63,8 +63,11 @@ For windows: if you compile with VC++, everything should work just file, if you 
    
 
 ## Your tasks:
-   - [ ] create a class _SocketInits_ for our sockets with methods for `init`, `uninit`, `disconnect` and `close_read`
-   - [ ] create a class _Socket_, with ***virtual*** methods for `send`, `recv`.
+   * A class that is not instantiable is a class that has all constructors protected except for copy and move constructors or has a pure virtual function. The method with protected constructors is not exactly not instantiable because you cand create an object from a class with protected constructors via a firend function or class, or via inheritance
+   * A class that cannot be constructed is a class that has all constructors protected excet for copy and move constructors.
+
+   - [ ] create a class _SocketInits_ that cannot be instantiated for our sockets with methods for `init`, `uninit`, `disconnect` and `close_read`
+   - [ ] create a class _Socket_ that cannot be instantiated with ***virtual*** methods for `send`, `recv`.
    - [ ] create a class for _ConnectSocket_, that inherits _SocketInits_ and _Socket_, overrides `send` and `recv` and defines `connect`. `connect` should return a _ConnectedSocket_ (see next task).
    - [ ] create a class forr _ConnectedSocket_, that inherits _ConnectSocket_ and cannot be constructed.
    - [ ] create a class for _ListenSocket_,  with methods for `listen` and `accept`. `accept` will return a new _ConnectedSocket_
