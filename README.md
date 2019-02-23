@@ -65,7 +65,8 @@ For windows: if you compile with VC++, everything should work just file, if you 
 ## Your tasks:
    - [ ] create a class for our sockets with methods for `init`, `uninit`, `disconnect` and `close_read`
    - [ ] create a class _Socket_, with ***virtual*** and ***abstract*** methods for `send`, `recv`.
-   - [ ] create a class for _ConnectedSocket_, that inherits _Socket_ and overrides `send` and `recv` and defines `connect`
+   - [ ] create a class for _ConnectSocket_, that inherits _Socket_ and overrides `send` and `recv` and defines `connect`. `connect` should return a _ConnectedSocket_.
+   - [ ] create a class forr _ConnectedSocket_, that inherits _ConnectSocket_ and cannot be constructed.
    - [ ] create a class for _ListenSocket_,  with methods for `listen` and `accept`. `accept` will return a new _ConnectedSocket_
    
    ``` 
