@@ -1,13 +1,13 @@
 /*
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        To compile in windows using gcc, u 
+        To compile in windows using g++, u 
         need to add this flags to gcc cmd:
 
                     -lws2_32
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
 
-#include "client_windows.h"
+#include "universal_client.h"
 
 int main()
 {
@@ -32,7 +32,7 @@ int main()
 
     res = sock::send(s, payload);
 
-    if (res)
+    if (res < 0)
     {
         fprintf(stderr, "send failed with %d\n", res);
         sock::uninit(s);
@@ -48,7 +48,7 @@ int main()
     res = sock::recv(s, recv_buf, 99);
     recv_buf[100] = '\0';
 
-    if (res)
+    if (res < 0)
     {
         fprintf(stderr, "recv failed with %d\n", res);
         sock::uninit(s);
@@ -56,7 +56,7 @@ int main()
     }
     else
     {
-        printf("Got response from server: %s", recv_buf);
+        printf("Got response from server: %s\n", recv_buf);
     }
 
     sock::disconnect(s);
