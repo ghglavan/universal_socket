@@ -48,7 +48,7 @@ For windows: if you compile with VC++, everything should work just file, if you 
       ```C++
       UniversalSocket accept(UniversalSocket &listen_socket) //  accept a new `UniversalSocket` from listening socket `listen_socket`
       ```
-      `accept` returns `INV_SOCK` on error, a new UnivesalSocket that can be used with `send`, `reacv`, `disconnect` on success.
+      `accept` returns `INV_SOCK` on error, a new connected UnivesalSocket that can be used with `send`, `reacv`, `disconnect` on success.
       `INV_SOCK` is a global variable: `UniversalSocket INV_SOCK = INVALID_SOCKET;` in windows `UniversalSocket INV_SOCK = -1;` in linux
       
    * Client specific:
@@ -58,5 +58,16 @@ For windows: if you compile with VC++, everything should work just file, if you 
       `connect` returns < 0 on error, 0 on success.
       ```
       
-## you can find examples in `client_tester.cpp` and `server_tester.cpp`
-      
+### You can find documented examples in `client_tester.cpp` and `server_tester.cpp`
+   Notice that the differences between server and client are in initialization. Once we have a connected socket, everything is the same. A socket we are `listen`ing to is called a listen socket. The only operation we can do on this socket is `accept`, which returns a new connected Universal socket.
+   
+
+## Your tasks:
+   - [ ] create a class for our sockets with methods for `init`, `uninit`, `disconnect` and `close_read`
+   - [ ] create a class _Socket_, with ***virtual*** and ***abstract*** methods for `send`, `recv`.
+   - [ ] create a class for _ConnectedSocket_, that inherits _Socket_ and overrides `send` and `recv` and defines `connect`
+   - [ ] create a class for _ListenSocket_,  with methods for `listen` and `accept`. `accept` will return a new _ConnectedSocket_
+   
+   ``` 
+   More to come
+   ```
