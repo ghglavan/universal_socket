@@ -4,16 +4,18 @@
 For windows: if you compile with VC++, everything should work just file, if you compile with g++, you need -lws2_32
 ```
 
-## Compilation
-   ### Command line:
-      * Windows: `g++ server_tester.cpp -lws2_32 -O3 -o server_tester.cpp`
-      * Linux: `g++ server_tester.cpp -O3 -o server_tester.cpp`
+## Compilation:
+   ## Command line:
+   
+   * Windows: `g++ server_tester.cpp -lws2_32 -O3 -o server_tester.cpp`
+   * Linux: `g++ server_tester.cpp -O3 -o server_tester.cpp`
       
-   ### CodeBlocks:
-      * Windows: 
-         1. Go to ***settings***->***Compiler..***->***Linker settings*** and add `-lws2_32` to ***Other linker options***
-         2. Open server_tester.cpp or client_tester.cpp and compile it
-      * Linux: Open server_tester.cpp or client_tester.cpp and compile it
+   ## CodeBlocks:
+   
+   * Windows: 
+      1. Go to ***settings***->***Compiler***->***Linker settings*** and add `-lws2_32` to ***Other linker options***
+      2. Open server_tester.cpp or client_tester.cpp and compile it
+   * Linux: Open server_tester.cpp or client_tester.cpp and compile it
       
 ## API:
    ### You can think of an UniversalSocket as a file descriptor, you can `open` it (`listen`, `connect`), you can `read` from it (`recv`), you can `write` to it (`send`), you can `close` it (`disconnect`, `close_read`)
