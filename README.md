@@ -59,7 +59,7 @@ For windows: if you compile with VC++, everything should work just file, if you 
       ```
       
 ### You can find documented examples in `client_tester.cpp` and `server_tester.cpp`
-   Notice that the differences between server and client are in initialization. Once we have a connected socket, everything is the same. A socket we are `listen`ing to is called a listen socket. The only operation we can do on this socket is `accept`, which returns a new connected Universal socket.
+   Notice that the differences between server and client are in initialization. Once we have a connected socket, everything is the same. A socket we are `listen`ing to is called a listen socket. The only operation we can do on this socket is `accept`, which returns a new connected UniversalSocket.
    
 
 ## Your tasks:
