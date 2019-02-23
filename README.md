@@ -26,7 +26,7 @@ For windows: if you compile with VC++, everything should work just file, if you 
       ```C++
       int recv(UniversalSocket &connect_socket, char *recvbuf, size_t count) // recv `count` bytes into `recv_buf` from `connect_socket`
       ```
-      `recv` returns < 0 on error, 0 on success.
+      `recv` returns < 0 on error, 0 on success. `recv` is blocking.
       
       ```C++
       int disconnect(UniversalSocket &connect_socket) // close(diconnect) connect_socket
