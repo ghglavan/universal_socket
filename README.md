@@ -5,7 +5,7 @@ For windows: if you compile with VC++, everything should work just file, if you 
 ```
 
 ## API:
-   ### You can think of an UniversalSocket as a file descriptor, you can `open` it (`listen`, `connect`), you can `read` from it (`recv`), you can `write` to it `send`, you can `close` it (`disconnect`, `close_read`)
+   ### You can think of an UniversalSocket as a file descriptor, you can `open` it (`listen`, `connect`), you can `read` from it (`recv`), you can `write` to it (`send`), you can `close` it (`disconnect`, `close_read`)
 
    * Common:
       ```C++
